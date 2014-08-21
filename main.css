@@ -1,0 +1,43 @@
+@charset: utf-8;
+body {
+  background-color:#FFE6CC;
+  color:brown;  
+  margin-top:50px;
+  
+}
+
+.container
+{
+  width:850px;
+  margin:0px auto;
+}
+
+.top
+{
+    float: top;
+    margin: 0px auto;
+    width: 850px;
+    
+}
+
+.mid
+{
+    float:right;
+    margin-right: 30px;
+    width: 550px;
+}
+
+.left
+{
+  float:left ;
+  margin-left:0px ;
+  width: 100px;
+}
+
+.film
+{
+  margin-top:480px ;  
+  margin-left:270px ;
+}
+
+/* css不要用 ID SELECTOR (#) *
