@@ -1,4 +1,45 @@
 <!doctype html>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<script>
+
+$(function() {
+    $("#btn-top").click(function(){
+        jQuery("html,body").animate({
+            scrollTop:0
+        },1000);
+    });
+    
+    $(window).scroll(function() {
+        if ( $(this).scrollTop() > 0){
+            $('#btn-top').fadeIn("fast");
+        } else {
+            $('#btn-top').stop().fadeOut("fast");
+        }
+    });  
+});
+
+jQuery(function($) {
+
+    var nav    = $('#btn-top'),
+        offset = nav.offset();
+$(window).scroll(function () {
+	
+  if($(window).scrollTop() > offset.top - 20) {
+    nav.addClass('fixed');
+  } else {
+    nav.removeClass('fixed');
+  }
+});
+});
+
+
+
+
+</script>
+
+
 <html>
  <head lang="zh-TW">
    <meta charset="utf-8"></meta>
@@ -12,13 +53,25 @@
 
 
    <div class="container">
-     <div class="top">
+     <div id="page-top" class="top">
        <img src="blank_top.jpg"></img>
      </div><br>
+     <center>
+     <section class="botton_div">
+       <a href="#mid">
+          <img src="story_intro.jpg"></img>
+       </a>&nbsp&nbsp&nbsp&nbsp
+       <a href="#film">
+          <img src="film_look.jpg"></img>
+       </a>&nbsp&nbsp&nbsp&nbsp
+       <a href="https://www.youtube.com/watch?v=QrbPl53HjSs">
+          <img src="youtube_look.jpg"></img>
+       </a>&nbsp&nbsp&nbsp&nbsp
+     </section><br><br></center>
      <div class="left">
        <img align="absmiddle" border="0" src="board_left.jpg"></img>
      </div>
-     <div class="mid">
+     <div id="mid" class="mid">
        <img src="bar1_intro.png"></img><br><br>
        美麗的宜蘭，美麗的陽光農園，住著美麗的三代女人。<br><br>
 秋鑾、含笑、心慧，她們溫柔堅強，任何的逆境也能牽手走過。<br><br>
@@ -32,13 +85,14 @@
 面對母親的反對，含笑改造父母親經營的老餐廳，並讓它重新開張「含笑食堂」除了販賣美味，也希望透過食物的味道，將父親的記憶找回來…在老天近乎捉弄的安排下， 種種逆境，看似委屈，走下去才知，一切都是最好的安排…<br>
      </div><br><br>
      
-     <div class="film">
+     <div id="film" class="film">
        <h3>第三集 ( 因第一、二集無嵌入)<h3>
           <iframe width="560" height="315" src="//www.youtube.com/embed/tL-guQptPgo?list=PL9ol7l5HGUYbo5L54DOQK4p_PEA106nyM" frameborder="0" allowfullscreen></iframe>
        
        
      </div>
 
+     <a href="#page-top" class="btn-top" id="btn-top"><img src="gotop.jpg"></img></a>
    </div>
 
 
